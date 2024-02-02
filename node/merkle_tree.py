@@ -1,4 +1,4 @@
-from node.utility import Cryptographic_SHA256_Hash
+from node.node_utility import Cryptographic_SHA256_Hash
 import math
 class Node:
     def __init__(self,value: int, left_child=None, right_child=None):
