@@ -1,5 +1,5 @@
 from datetime import datetime
-from node_utility import Cryptographic_SHA256_Hash
+from node_utility import calculate_hash
 import json
 
 class Block:
@@ -19,7 +19,7 @@ class Block:
             "timestamp": str(self.timestamp),
             "previous_block_cryptographic_hash": self.previous_block_cryptographic_hash
         }
-        hash_output = Cryptographic_SHA256_Hash(json.dumps(block_data, indent=2).encode('utf-8'))
+        hash_output = calculate_hash(json.dumps(block_data, indent=2).encode('utf-8'))
         self.hash_output = hash_output
         return hash_output
     

@@ -1,5 +1,6 @@
 from Crypto.Hash import SHA256, RIPEMD160
 import json
+import os
 
 def calculate_hash(data, hash_function: str = "sha256"):
     if type(data) == str:
